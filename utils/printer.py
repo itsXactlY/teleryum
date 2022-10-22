@@ -1,7 +1,7 @@
 from termcolor import colored
 
 def print_start():
-    print(colored(LOGO,"cyan"))
+    #print(colored(LOGO,"cyan"))
     now = datetime.now(tzinfo)
     print(colored("\t SERVER ONLINE ","green"),now.strftime("%d/%m/%Y %H:%M:%S\n\n"))
 
