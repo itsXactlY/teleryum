@@ -235,7 +235,7 @@ async def main():
 
 if __name__ == "__main__":
 
-    load_dotenv()
+    #load_dotenv()
     FTX_READONLY_C1 = getenv('FTX_READONLY_C1')
     FTX_READONLY_C1_HASH = getenv('FTX_READONLY_C1_HASH')
 
