@@ -12,6 +12,7 @@ from copy import deepcopy
 
 from termcolor import colored
 #from dotenv import load_dotenv
+from os import getenv
 
 import asyncio
 from telethon import TelegramClient, events
@@ -201,7 +202,7 @@ async def deamon_trader(op_data,channel):
     # for kucoinfutures with ccxt API in particular conditions 
 
 async def main():      
-    load_dotenv()
+    #load_dotenv()
 
     TELEGRAM_USERNAME = getenv('TELEGRAM_USERNAME')
     TELEGRAM_ID = getenv('TELEGRAM_ID')
