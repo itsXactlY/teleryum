@@ -1,9 +1,14 @@
 from termcolor import colored
+import sys
+import os
+import time
+import socket
+import math
 
 def print_start():
     #print(colored(LOGO,"cyan"))
-    now = datetime.now(tzinfo)
-    print(colored("\t SERVER ONLINE ","green"),now.strftime("%d/%m/%Y %H:%M:%S\n\n"))
+    #now = datetime.now(tzinfo)
+    #print(colored("\t SERVER ONLINE ","green"),now.strftime("%d/%m/%Y %H:%M:%S\n\n"))
 
 def print_op_data(op_data):
     print(colored('OPERATION DATA','cyan'))
