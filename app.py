@@ -11,7 +11,7 @@ from pprint import pprint
 from copy import deepcopy
 
 from termcolor import colored
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 import asyncio
 from telethon import TelegramClient, events
@@ -171,8 +171,8 @@ async def deamon_trader(op_data,channel):
     and open operation if free balance avaiable    
     """
 
-    FTX_C1 = os.getenv('FTX_C1')
-    FTX_C1_HASH = os.getenv('FTX_C1_HASH')
+    FTX_C1 = getenv('FTX_C1')
+    FTX_C1_HASH = getenv('FTX_C1_HASH')
 
     ftx_c1 = ccxt.ftx({
                     'headers': {
@@ -184,9 +184,9 @@ async def deamon_trader(op_data,channel):
                         })
 
 
-    KUCOIN_MAIN_KEY = os.getenv('KUCOIN_MAIN_KEY')
-    KUCOIN_MAIN_SECRET = os.getenv('KUCOIN_MAIN_SECRET')
-    KUCOIN_MAIN_PASS = os.getenv('KUCOIN_MAIN_PASS')
+    KUCOIN_MAIN_KEY = getenv('KUCOIN_MAIN_KEY')
+    KUCOIN_MAIN_SECRET = getenv('KUCOIN_MAIN_SECRET')
+    KUCOIN_MAIN_PASS = getenv('KUCOIN_MAIN_PASS')
 
     kucoinfutures_main = ccxt.kucoinfutures({
         'adjustForTimeDifference': True,
@@ -203,9 +203,9 @@ async def deamon_trader(op_data,channel):
 async def main():      
     load_dotenv()
 
-    TELEGRAM_USERNAME = os.getenv('TELEGRAM_USERNAME')
-    TELEGRAM_ID = os.getenv('TELEGRAM_ID')
-    TELEGRAM_HASH = os.getenv('TELEGRAM_HASH')
+    TELEGRAM_USERNAME = getenv('TELEGRAM_USERNAME')
+    TELEGRAM_ID = getenv('TELEGRAM_ID')
+    TELEGRAM_HASH = getenv('TELEGRAM_HASH')
 
     client = TelegramClient(TELEGRAM_USERNAME, TELEGRAM_ID, TELEGRAM_HASH) 
 
@@ -235,7 +235,7 @@ async def main():
 if __name__ == "__main__":
 
     load_dotenv()
-    FTX_READONLY_C1 = os.getenv('FTX_READONLY_C1')
-    FTX_READONLY_C1_HASH = os.getenv('FTX_READONLY_C1_HASH')
+    FTX_READONLY_C1 = getenv('FTX_READONLY_C1')
+    FTX_READONLY_C1_HASH = getenv('FTX_READONLY_C1_HASH')
 
     asyncio.run(main())
