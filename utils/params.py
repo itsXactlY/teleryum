@@ -1,6 +1,6 @@
 import sys
 
-project_folder = sys.path[0].replace('utils')
+#project_folder = sys.path[0].replace('utils')
 
 print_op = True
 
